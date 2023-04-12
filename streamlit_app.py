@@ -48,4 +48,6 @@ add_my_fruit =  streamlit.text_input("Enter the name of the new fruit:")
 if streamlit.button("Add Fruit"):
     my_cur.execute(f"INSERT INTO fruit_load_list (fruit_name) VALUES ('{add_my_fruit}')")
     my_cnx.commit()
-    streamlit.success(f"{add_my_fruit} has been added to the fruit_load_list table!")
+    streamlit.success(f"Thanks for adding {add_my_fruit}")
+#This will not work correctly, but just go with it for now
+my_cur.execute("insert into fruit_load_list values ('from streamlit')")
