@@ -50,9 +50,6 @@ def get_fruit_load_list():
     with my_cnx. cursor() as my_cur:
          my_cur.execute("select * from fruit load list")
          return my_cur.fetchal1()
-
-#do not run anything pass while we troubleshoot
-streamlit.stop()
     
 # Add a button to load the fruit
 if streamlit.button( 'Get Fruit List'):
